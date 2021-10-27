@@ -15,6 +15,7 @@ $precio=$_POST['precio_hora'];
 $idUser=$_POST['id_usuario'];
 
 $query = "INSERT INTO `cancha` (`id`, `nombre`, `precio_hora`, `id_usuario`, `numero_canchas`, `direccion`) VALUES (NULL, '".$nombre."', '".$precio."', '".$idUser."', '".$numeroCanchasas."', '".$direccion."')";
+//$query = "INSERT INTO `cancha` (`id`, `nombre`, `precio_hora`, `id_usuario`, `numero_canchas`, `direccion`) VALUES (NULL, 'nombre', '123', '76', '4', 'direccion')";
 $query_execute = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
 ?>
