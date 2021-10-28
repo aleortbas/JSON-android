@@ -12,7 +12,7 @@ mysqli_select_db($conn, $db_name);
 $id=$_POST['id'];
 
 
-$query = "delete from multas where id = '".$id."'";
+$query = "delete from numero_canchas where id = '".$id."'";
 //$query = "insert into personas(dni, nombre, telefono, email) values ('1', 'asd', 'asd', 'asd')";
 $query_execute = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
