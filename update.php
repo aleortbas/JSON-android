@@ -9,16 +9,13 @@ or trigger_error (mysqli_error($conn), E_USER_ERROR);
 mysqli_select_db($conn, $db_name);
 
 
+$id_local=$_POST['id_local'];
+$disponible=$_POST['disponible'];
+$nombre=$_POST['nombre'];
+$imagen=$_POST['imagen'];
 $id=$_POST['id'];
-$cedula_propiertario=$_POST['cedula_propiertario'];
-$placa_vehiculo=$_POST['placa_vehiculo'];
-$fecha=$_POST['fecha'];
-$descripcion=$_POST['descripcion'];
-$valor=$_POST['valor'];
-$estado=$_POST['estado'];
 
-
-$query = "update multas set cedula_propiertario = '".$cedula_propiertario."', placa_vehiculo = '".$placa_vehiculo."', fecha = '".$fecha."', descripcion = '".$descripcion."', valor = '".$valor."', estado = '".$estado."' where id = '".$id."'";
+$query = "UPDATE `numero_canchas` SET `disponible` = '".$disponible."', `nombre` = '".$nombre."', `imagen` = '".$imagen."', `id_Local` = '".$id_local."' WHERE `numero_canchas`.`id` = '".$id."';";
 //$query = "insert into personas(dni, nombre, telefono, email) values ('1', 'asd', 'asd', 'asd')";
 $query_execute = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
