@@ -10,7 +10,7 @@ mysqli_select_db($conn, $db_name);
 
 $id=$_POST['id'];
 
-$query = "UPDATE `usuario` SET `rol` = '3' WHERE `usuario`.`id` = '100';";
+$query = "UPDATE `usuario` SET `rol` = '1' WHERE `usuario`.`id` = '100';";
 $query2 = "UPDATE `solicitud` SET `estado` = '2' WHERE `id_usuario` = '100'";;
 //$query = "insert into personas(dni, nombre, telefono, email) values ('1', 'asd', 'asd', 'asd')";
 $query_execute = mysqli_query($conn, $query) or die (mysqli_error($conn));
