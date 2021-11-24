@@ -13,7 +13,7 @@ $conn = mysqli_connect($host, $username, $pass, $db_name);
 $id_Local=$_GET['id'];
 
 
-$stmt = $conn->prepare("SELECT id, disponible, nombre, id_Local, imagen FROM numero_canchas WHERE id_Local='".$id_Local."';");
+$stmt = $conn->prepare("SELECT id, disponible, nombre, id_Local, foto FROM numero_canchas WHERE id_Local='".$id_Local."';");
 
 $stmt->execute();
 
@@ -30,7 +30,7 @@ $usuario = array();
         $temp['id_Local'] = $idLocal;
         $temp['disponible'] = $disponible;
         $temp['nombre'] = $nombre;
-        $temp['imagen'] = $image;
+        $temp['foto'] = $image;
 
         array_push($usuario, $temp);
     }

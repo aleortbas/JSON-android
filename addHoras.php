@@ -8,14 +8,12 @@ $conn = mysqli_connect($host, $username, $pass)
 or trigger_error (mysqli_error($conn), E_USER_ERROR);
 mysqli_select_db($conn, $db_name);
 
-$nombre=$_POST['nombre'];
 $hora=$_POST['hora'];
 $horaFinal=$_POST['hora_final'];
 $id_cancha=$_POST['id'];
-$fecha=$_POST['fecha'];
-$id_user=$_POST['idUser'];
+$estado=$_POST['estado'];
 
-$query = "INSERT INTO `reservas` (`id`, `nombre`, `hora_inicio`, `hora_final`, `id_cancha`, `fecha`,`id_usuario`) VALUES (NULL, '".$nombre."', '".$hora."', '".$horaFinal."', '".$id_cancha."', '".$fecha."', '".$id_user."');";
+$query = "INSERT INTO `horas_disponibles` (`id`, `id_cancha`, `hora`, `estado`, `hora_final`) VALUES (NULL, '".$id_cancha."', '".$hora."', '1', '".$horaFinal."');";
 //$query = "INSERT INTO `reservas` (`id`, `nombre`, `hora_inicio`, `hora_final`, `id_cancha`, `fecha`) VALUES (NULL, 'nombre', '17:00', '18:00', '57', '2021-11-18');";
 $query_execute = mysqli_query($conn, $query) or die (mysqli_error($conn));
 

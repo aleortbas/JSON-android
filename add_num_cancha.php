@@ -15,7 +15,7 @@ $nombre=$_POST['nombre'];
 $idlocal=$_POST['id_local'];
 $imagen=$_POST['imagen'];
 
-$query = "INSERT INTO `numero_canchas`(`id`, `disponible`, `nombre`, `id_Local`, `imagen`) VALUES (NULL,'".$disponible."','".$nombre."','".$idlocal."','".$imagen."')";
+$query = "INSERT INTO `numero_canchas`(`id`, `disponible`, `nombre`, `id_Local`, `foto`) VALUES (NULL,'".$disponible."','".$nombre."','".$idlocal."','".$imagen."')";
 //$query = "INSERT INTO `numero_canchas`(`id`, `disponible`, `nombre`, `id_Local`, `imagen`) VALUES ('[value-1]','[value-2]','value-3','30','[value-5]')";
 $query_execute = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
